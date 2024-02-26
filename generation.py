@@ -226,7 +226,7 @@ def choose_class_year():
 def generate_class_lists(class_year):
     if class_year == 'Freshman':
         # Randomly select 6-8 classes from the freshman class list
-        return random.sample(freshman_classes, k=random.randint(6, 8))
+        return [random.sample(freshman_classes, k=random.randint(6, 8))]
     elif class_year == 'Sophomore':
         # Randomly select 6-8 classes for freshman and sophomore years
         return [random.sample(freshman_classes, k=random.randint(6, 8)),
@@ -339,3 +339,6 @@ synthetic_data = pd.concat([personal_identifiers, demographics, academics, behav
 
 # Display the first few rows of the synthetic data
 print(synthetic_data.head())
+
+# Save the synthetic data to a CSV file
+synthetic_data.to_csv('synthetic_data.csv', index=False)
