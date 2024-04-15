@@ -7,7 +7,7 @@ import random
 fake = Faker()
 
 # Number of records for the sample
-num_records = 1000
+num_records = 1800
 
 # Function to generate a list of fake names
 def generate_names(n):
@@ -341,4 +341,4 @@ synthetic_data = pd.concat([personal_identifiers, demographics, academics, behav
 print(synthetic_data.head())
 
 # Save the synthetic data to a CSV file
-synthetic_data.to_csv('synthetic_data.csv', index=False)
+synthetic_data.to_csv('../synthetic_data.csv', index=False)

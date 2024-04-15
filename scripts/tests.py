@@ -1,5 +1,5 @@
 # Import functions from generation.py
-from generation import generate_demographic_weights
+from scripts.generation import generate_demographic_weights
 
 
 # Testing custom demographic weight generation function
